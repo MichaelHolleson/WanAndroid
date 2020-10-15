@@ -29,18 +29,12 @@ https://www.wanandroid.com/friend/json
 - 首页搜索热词：
 https://www.wanandroid.com/hotkey/json
 
-
-
 ### 2.3 知识体系：
 - 知识体系：
 https://www.wanandroid.com/tree/json
 
-
-
 ### 2.4 导航：
 https://www.wanandroid.com/navi/json
-
-
 
 ### 2.5 项目：
 - 项目一级列表：
