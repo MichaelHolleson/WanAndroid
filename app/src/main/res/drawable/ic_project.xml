@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="1024dp"
-    android:height="1024dp"
-    android:viewportWidth="1024"
-    android:viewportHeight="1024">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <path
-        android:fillColor="#1F1F1F"
-        android:pathData="M153.6 85.312v384H448l174.912 85.376H870.4v-384H585.408L401.984 85.312H153.6z m0
-469.376V1024H64V0h358.656l183.488 85.312H960V640H601.344L426.432 554.688H153.6z" />
-</vector>
+    <item android:drawable="@drawable/ic_project_fill" android:state_checked="true"/>
+
+    <item android:drawable="@drawable/ic_project_normal" android:state_checked="false"/>
+
+</selector>
