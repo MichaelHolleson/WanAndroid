@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity {
                     default:
                         break;
                 }
-                return false;
+                return true;
             }
         });
     }
