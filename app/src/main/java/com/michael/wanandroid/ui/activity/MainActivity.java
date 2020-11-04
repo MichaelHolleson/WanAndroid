@@ -12,7 +12,6 @@ import android.view.MenuItem;
 
 import com.michael.wanandroid.R;
 import com.michael.wanandroid.base.BaseActivity;
-import com.michael.wanandroid.base.BaseFragment;
 import com.michael.wanandroid.ui.fragment.HomeFragment;
 import com.michael.wanandroid.ui.fragment.MineFragment;
 import com.michael.wanandroid.ui.fragment.ProjectFragment;
@@ -20,6 +19,9 @@ import com.michael.wanandroid.ui.fragment.TreeFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
