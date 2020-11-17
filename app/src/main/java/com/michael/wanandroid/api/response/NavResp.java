@@ -1,7 +1,5 @@
 package com.michael.wanandroid.api.response;
 
-import com.michael.wanandroid.base.BaseResponse;
-
 import java.util.List;
 
 public class NavResp extends BaseResponse<NavResp.DataBean> {

@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.michael.wanandroid.R;
 import com.michael.wanandroid.base.BaseActivity;
@@ -19,9 +20,6 @@ import com.michael.wanandroid.ui.fragment.TreeFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
@@ -37,8 +35,11 @@ public class MainActivity extends BaseActivity {
 
     private FragmentManager mFragmentManager;
 
-    @BindView(R.id.bottomNavigationView)
+    @BindView(R.id.bnv_main)
     BottomNavigationView mBottomNavigationView;
+
+    @BindView(R.id.tv_main_title)
+    TextView mTvMainTitle;
 
 
     @Override
@@ -46,21 +47,30 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        mFragmentManager = getSupportFragmentManager();
+        switchFragment(TAG_FRAGMENT_HOME);
+        mTvMainTitle.setText("首页");
+
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.navigation_home:
                         switchFragment(TAG_FRAGMENT_HOME);
+                        mTvMainTitle.setText("首页");
                         break;
                     case R.id.navigation_tree:
                         switchFragment(TAG_FRAGMENT_TREE);
+                        mTvMainTitle.setText("知识体系");
                         break;
                     case R.id.navigation_project:
                         switchFragment(TAG_FRAGMENT_PROJECT);
+                        mTvMainTitle.setText("项目");
                         break;
                     case R.id.navigation_mine:
                         switchFragment(TAG_FRAGMENT_MINE);
+                        mTvMainTitle.setText("我的");
                         break;
                     default:
                         break;
@@ -68,16 +78,6 @@ public class MainActivity extends BaseActivity {
                 return true;
             }
         });
-    }
-
-    @Override
-    protected void initView() {
-    }
-
-    @Override
-    protected void initData() {
-        mFragmentManager = getSupportFragmentManager();
-        switchFragment(TAG_FRAGMENT_HOME);
     }
 
     private void switchFragment(String fragmentTag) {
@@ -103,7 +103,7 @@ public class MainActivity extends BaseActivity {
             } else if (TAG_FRAGMENT_MINE.equals(fragmentTag)) {
                 fragment = MineFragment.getInstance();
             }
-            fragmentTransaction.add(R.id.frameLayout, fragment, fragmentTag);
+            fragmentTransaction.add(R.id.fl_main, fragment, fragmentTag);
         } else {
             fragmentTransaction.show(fragment);
         }

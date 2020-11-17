@@ -34,13 +34,4 @@ public class SplashActivity extends BaseActivity {
         }.start();
     }
 
-    @Override
-    protected void initView() {
-
-    }
-
-    @Override
-    protected void initData() {
-
-    }
 }

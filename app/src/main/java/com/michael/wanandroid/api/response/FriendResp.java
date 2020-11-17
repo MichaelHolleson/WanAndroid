@@ -1,7 +1,5 @@
 package com.michael.wanandroid.api.response;
 
-import com.michael.wanandroid.base.BaseResponse;
-
 public class FriendResp extends BaseResponse<FriendResp.DataBean> {
 
     public static class DataBean {

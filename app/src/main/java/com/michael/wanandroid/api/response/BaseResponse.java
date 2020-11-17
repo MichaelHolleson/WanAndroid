@@ -1,4 +1,4 @@
-package com.michael.wanandroid.base;
+package com.michael.wanandroid.api.response;
 
 public class BaseResponse<T> {
     public int errorCode;

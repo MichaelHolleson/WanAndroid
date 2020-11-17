@@ -1,8 +1,6 @@
 package com.michael.wanandroid.api.response;
 
 
-import com.michael.wanandroid.base.BaseResponse;
-
 import java.util.List;
 
 public class ArticleListResp extends BaseResponse<ArticleListResp.DataBean> {
@@ -70,6 +68,19 @@ public class ArticleListResp extends BaseResponse<ArticleListResp.DataBean> {
 
         public void setDatas(List<ArticleBean> datas) {
             this.datas = datas;
+        }
+
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "curPage=" + curPage +
+                    ", offset=" + offset +
+                    ", over=" + over +
+                    ", pageCount=" + pageCount +
+                    ", size=" + size +
+                    ", total=" + total +
+                    ", datas=" + datas +
+                    '}';
         }
 
         public static class ArticleBean {
@@ -362,6 +373,44 @@ public class ArticleListResp extends BaseResponse<ArticleListResp.DataBean> {
                 this.tags = tags;
             }
 
+            @Override
+            public String toString() {
+                return "ArticleBean{" +
+                        "apkLink='" + apkLink + '\'' +
+                        ", audit=" + audit +
+                        ", author='" + author + '\'' +
+                        ", canEdit=" + canEdit +
+                        ", chapterId=" + chapterId +
+                        ", chapterName='" + chapterName + '\'' +
+                        ", collect=" + collect +
+                        ", courseId=" + courseId +
+                        ", desc='" + desc + '\'' +
+                        ", descMd='" + descMd + '\'' +
+                        ", envelopePic='" + envelopePic + '\'' +
+                        ", fresh=" + fresh +
+                        ", id=" + id +
+                        ", link='" + link + '\'' +
+                        ", niceDate='" + niceDate + '\'' +
+                        ", niceShareDate='" + niceShareDate + '\'' +
+                        ", origin='" + origin + '\'' +
+                        ", prefix='" + prefix + '\'' +
+                        ", projectLink='" + projectLink + '\'' +
+                        ", publishTime=" + publishTime +
+                        ", realSuperChapterId=" + realSuperChapterId +
+                        ", selfVisible=" + selfVisible +
+                        ", shareDate=" + shareDate +
+                        ", shareUser='" + shareUser + '\'' +
+                        ", superChapterId=" + superChapterId +
+                        ", superChapterName='" + superChapterName + '\'' +
+                        ", title='" + title + '\'' +
+                        ", type=" + type +
+                        ", userId=" + userId +
+                        ", visible=" + visible +
+                        ", zan=" + zan +
+                        ", tags=" + tags +
+                        '}';
+            }
+
             public static class TagsBean {
                 private String name;
                 private String url;
@@ -380,6 +429,14 @@ public class ArticleListResp extends BaseResponse<ArticleListResp.DataBean> {
 
                 public void setUrl(String url) {
                     this.url = url;
+                }
+
+                @Override
+                public String toString() {
+                    return "TagsBean{" +
+                            "name='" + name + '\'' +
+                            ", url='" + url + '\'' +
+                            '}';
                 }
             }
         }

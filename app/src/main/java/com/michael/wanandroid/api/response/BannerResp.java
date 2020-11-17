@@ -1,7 +1,5 @@
 package com.michael.wanandroid.api.response;
 
-import com.michael.wanandroid.base.BaseResponse;
-
 public class BannerResp extends BaseResponse<BannerResp.DataBean> {
 
     public static class DataBean {
