@@ -8,22 +8,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".base.WanAndroidApp"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name=".mvp.view.activity.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".mvp.view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name=".mvp.view.activity.CollectActivity"></activity>
+        <activity android:name=".mvp.view.activity.ArticleActivity"></activity>
+        <activity android:name=".mvp.view.activity.SettingActivity"></activity>
+        <activity android:name=".mvp.view.activity.SearchActivity"></activity>
+        <activity android:name=".mvp.view.activity.TestActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
-        <activity android:name=".ui.activity.CollectActivity"></activity>
-        <activity android:name=".ui.activity.ArticleActivity"></activity>
-        <activity android:name=".ui.activity.SettingActivity"></activity>
-        <activity android:name=".ui.activity.SearchActivity"></activity>
     </application>
 
 

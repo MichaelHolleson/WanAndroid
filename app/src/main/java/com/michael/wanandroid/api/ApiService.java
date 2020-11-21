@@ -1,8 +1,9 @@
 package com.michael.wanandroid.api;
 
 
-import com.michael.wanandroid.api.response.ArticleListResp;
-import com.michael.wanandroid.api.response.BannerResp;
+import com.michael.wanandroid.base.BaseResponse;
+import com.michael.wanandroid.core.bean.ArticleList;
+import com.michael.wanandroid.core.bean.BannerResp;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -13,7 +14,7 @@ public interface ApiService {
     String BASE_URL = "https://www.wanandroid.com";
 
     @GET("article/list/{index}/json")
-    Observable<ArticleListResp> getArticleList(@Path("index") int index);
+    Observable<BaseResponse<ArticleList>> getArticleList(@Path("index") int index);
 
     @GET("banner/json")
     Observable<BannerResp> getBanner();
